@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Reliable Transport Protocol</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							 <!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="itch.html">Empty Echos</a></li>
+							<li><a href="wrom.html">What Remains of Me</a></li>
+							<li><a href="platformingPlaftforms.html">Platforming Platforms</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Reliable Transport Protocol</h1>
+							<span class="image main"><img src="images/rtp.png" alt="" /></span>
+							<p>This is a Reliable Transport Protocol written in Java as a partner assignment for Networks and Distributed Systems. The program was run in a simulated network provided by our professor. The aim was to maximum speed while minimizing data sent over the network. The protocol can handle duplicate packets and ACKs, changing delay in the network, dropped packets, corrupted packets, and different latencies and bandwidths. The class does not allow me to make my repository public but access can be granted upon request.</p>
+
+							<!-- ReadMe -->
+							<h1 id="cs3700-project-4-reliable-transport-protocol">CS3700 Project 4 : Reliable Transport Protocol</h1>
+<h2 id="overview">Overview</h2>
+<p>This Reliable Transport Protocol (RTP) implementation is designed to ensure the consistent and ordered delivery of packets between a sender and a receiver over an unreliable network. The protocol uses various techniques and features to mitigate issues like dropped packets and to achieve efficient and reliable data transfer.</p>
+<h2 id="high-level-approach">High-Level Approach</h2>
+<ul>
+<li>Sliding Window Algorithm: Implemented to ensure that a specified number of unacknowledged packets can be in transit at any given time. This helps in maintaining throughput while also handling dropped packets efficiently.</li>
+<li>Sequence Numbers: Each packet is assigned a unique sequence number. This aids in the identification of lost packets and helps ensure in-order delivery.</li>
+<li>Acknowledgments (ACKs): The receiver sends an ACK for every packet received. This informs the sender about successful reception and the readiness for the next set of packets.</li>
+<li>Round-Trip Time (RTT) Estimation: Implemented to adaptively adjust the resend time for packets that aren&#39;t acknowledged, enhancing performance.</li>
+<li>Packets Resend Mechanism: If a packet isn&#39;t acknowledged within the estimated RTT, it&#39;s retransmitted.</li>
+<li>JSON Serialization: For structuring the packet data, easing the parsing process and ensuring extensibility of packet fields.</li>
+</ul>
+<h2 id="challenges-faced">Challenges Faced</h2>
+<ul>
+<li>Dropped Packets: One of the inherent challenges in an unreliable network is the dropping of packets. We addressed this by incorporating an acknowledgment mechanism and a retransmission strategy based on RTT estimation.</li>
+<li>Implementing the Sliding Window: Achieving the correct balance between throughput and network congestion was challenging. Too large a window might flood the network, while too small a window might underutilize it.</li>
+<li>Performance Enhancement: Ensuring optimal performance without compromising reliability was key. We achieved this through adaptive RTT estimation and efficient packet serialization/deserialization techniques.</li>
+</ul>
+<h2 id="features-of-the-design">Features of the Design</h2>
+<ul>
+<li>Modularity: The code is structured into distinct classes like Sender, Receiver, and SenderThread, promoting clarity and maintainability.</li>
+<li>Concurrency: With the help of the SenderThread, packets can be sent concurrently, maximizing throughput.</li>
+<li>Adaptive Behavior: The protocol can adapt to network conditions by adjusting the time it waits before resending a packet based on current RTT estimates.</li>
+<li>Extensibility: The use of JSON for packet structure means new fields can be added in the future with minimal changes.</li>
+<li>Logging: Uses System.err to log important events and potential issues, aiding in debugging and monitoring.</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Logging: We heavily rely on logging (using System.err) to get insights into the protocol&#39;s behavior, packet drops, retransmissions, and more.</li>
+<li>Simulator: Utilized a provided simulator to mimic various network conditions and validate the reliability and performance of the RTP implementation. This helps in ensuring the protocol behaves as expected under different scenarios.</li>
+</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

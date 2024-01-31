@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Web Crawler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							 <!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="itch.html">Empty Echos</a></li>
+							<li><a href="wrom.html">What Remains of Me</a></li>
+							<li><a href="platformingPlaftforms.html">Platforming Platforms</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Web Crawler</h1>
+							<span class="image main"><img src="images/fbl.png" alt="" /></span>
+							<p>This is a Web Crawler that was built as a partner assignment for my Networks and Distributed Systems class. It was built to crawl all the pages on a fake social media site ran by our professor dubed "Fakebook". The goal was to find all the flags on the site in about 15 minutes. The project was build in Java and as required by the project all HTTP request and response code was written from scratch. The class does not allow me to make my repository public but access can be granted upon request.</p>
+
+							<!-- ReadMe -->
+							<h1 id="cs3700-project-5-web-crawler">CS3700 Project 5 : Web Crawler</h1>
+<h2 id="overview">Overview</h2>
+<p>This project involves the development of a Java-based web crawler specifically tailored for navigating and extracting information from a mock social network site called &quot;Fakebook&quot;. The crawler is designed to authenticate, traverse web pages, and collect unique secret flags scattered across the site.</p>
+<h2 id="high-level-approach">High-Level Approach</h2>
+<p>The crawler operates by establishing a secure socket connection using Java&#39;s SSLSocketFactory and then logs into Fakebook with provided credentials. After successful login, it systematically explores the links found on each page (focusing on those within the /fakebook/ domain) and keeps track of visited URLs to avoid revisiting them. The primary goal is to locate and gather five unique secret flags formatted as 64-character alphanumeric strings.</p>
+<h2 id="challenges-faced">Challenges Faced</h2>
+<ul>
+<li>Session Management: Ensuring a continuous session through cookie management was critical, especially for maintaining the logged-in state.</li>
+<li>Dynamic Content Navigation: Adapting to different page structures and URLs while avoiding redundant visits to previously crawled pages.</li>
+<li>Error Handling: Gracefully managing various HTTP response statuses like 302 (Found), 403 (Forbidden), 404 (Not Found), etc.</li>
+<li>Efficiency: Implementing an efficient and non-repetitive crawling strategy to minimize the load on the server and adhere to ethical crawling practices.</li>
+</ul>
+<h2 id="features-of-the-design">Features of the Design</h2>
+<ul>
+<li>Modularity: The code is structured into distinct classes like Sender, Receiver, and SenderThread, promoting clarity and maintainability.</li>
+<li>Concurrency: With the help of the SenderThread, packets can be sent concurrently, maximizing throughput.</li>
+<li>Adaptive Behavior: The protocol can adapt to network conditions by adjusting the time it waits before resending a packet based on current RTT estimates.</li>
+<li>Extensibility: The use of JSON for packet structure means new fields can be added in the future with minimal changes.</li>
+<li>Logging: Uses System.err to log important events and potential issues, aiding in debugging and monitoring.</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Integration Testing: The crawler&#39;s ability to log in, maintain session state, and navigate through different pages was tested in a more integrated manner.</li>
+<li>Edge Case Handling: Specific scenarios, like handling redirects and extracting flags from complex HTML structures, were thoroughly tested.</li>
+<li>Debugging: Extensive logging was utilized for tracking the flow and identifying any logical errors or unexpected behaviors.</li>
+</ul>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

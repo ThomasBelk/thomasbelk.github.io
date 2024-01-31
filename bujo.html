@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bujo Journal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							 <!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="itch.html">Empty Echos</a></li>
+							<li><a href="wrom.html">What Remains of Me</a></li>
+							<li><a href="platformingPlaftforms.html">Platforming Platforms</a></li>
+							<li><a href="bujo.html">Bujo Journal</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Bujo Journal</h1>
+							<span class="image main"><img src="images/NewWeekView.png" alt="" /></span>
+							<p>A weekly planner developed in Java in my OOD class. Personal Contributions include task and event creation, notes, tag parsing, the ability to create custom event categories, and CSS styling.</p>
+							<a href="https://github.com/CS-3500-OOD/pa05-threegoodatcoding">Github</a>
+
+							<!-- MD -->
+<h1 id="3500-pa05-project-repo">3500 PA05 Project Repo</h1>
+<h2 id="features">Features</h2>
+<h3 id="week-view">Week View</h3>
+<p>Days are displayed horizontally, with the journal&#39;s name at the top. Inside each day&#39;s block, tasks and events are listed vertically. The program includes a task queue, a weekly overview, and a notes section. All user interactions occur via the menu bar at the top. This is a functional, easy-to-use personal organizer.</p>
+<span class="image main"><img src="images/NewWeekView.png" alt="" /></span>
+
+<h3 id="event-and-task-creation">Event and Task Creation</h3>
+<p>Users should have the capability to generate a new Event or Task and select a specific day of the week for its display. For every Event, users must define the following parameters: name, description (optional), day of the week, start time, duration, and category (optional) - with all but the description being mandatory. For each Task, the user needs to provide: a name, description (optional), day of the week, and category (optional). By default, new Tasks are tagged as incomplete.</p>
+<span class="image main"><img src="images/AddNewEvent.png"/></span>
+<span class="image main"><img src="images/AddNewTask.png"/></span>
+
+<h3 id="persistence">Persistence</h3>
+<p>Users have the ability to save their journal locally in their chosen directory, and likewise, load a journal when needed. The journal will be stored in JSON format, but with a unique extension &quot;.bujo&quot; for easy identification and access.</p>
+<h3 id="commitment-warnings">Commitment Warnings</h3>
+<p>Users are given the capability to set a limit for the number of events and tasks per day. This restriction applies uniformly to every day of the week. If a user exceeds these set limits, a prompt warning message will be displayed. Importantly, these maximum values for tasks and events within a week will be retained and saved within the corresponding &#39;.bujo&#39; file.</p>
+<span class="image main">
+  <img src="images/CommitmentWarning.png"/>
+</span>
+
+<h3 id="task-queue">Task Queue</h3>
+<p>The program includes a Task Queue feature that automatically accumulates all tasks from the week. This design streamlines task management, providing an easier way for users to review their tasks at a glance.</p>
+<span class="image main">
+  <img src="images/TaskQueue.png">
+</span>
+
+<h3 id="categories">Categories</h3>
+<p>Every event or task within the program can be categorized for easier management. Users can create new categories, which are applicable for the entire week and are saved as part of the &#39;.bujo&#39; file format. This enables users to assign a specific category to an event or a task, further streamlining their organization process.</p>
+<span class="image main">
+  <img src="images/NewCategory.png"/>
+</span>
+
+<h3 id="quotes-notes">Quotes &amp; Notes</h3>
+<p>The program includes a note-writing feature where users can jot down their thoughts. Notes can be edited by opening a dedicated box and any changes made will be immediately reflected in the view. This provides users with an easy and intuitive way to manage their notes.</p>
+<span class="image main">
+  <img src="images/EditNotes.png">
+</span>
+<span class="image main">
+  <img src="images/Notes.png"/>
+</span>
+
+<h3 id="weekly-overview">Weekly Overview</h3>
+<p>The program&#39;s graphical user interface includes a weekly statistics section. This presents key metrics such as the total number of events and tasks, along with the percentage of tasks that have been completed. This data-driven insight aids users in tracking their productivity throughout the week.</p>
+<span class="image main">
+  <img src="images/WeeklyOverview.png"/>
+</span>
+
+<h3 id="progress-bar">Progress Bar</h3>
+<p>The program features a daily progress bar, graphically illustrating the number of tasks completed versus those planned for each day. In addition, a numerical count of the remaining tasks for each day is also provided. Both these elements are displayed prominently on the Week view, offering users a clear visual of their daily task progress.</p>
+<span class="image main">
+  <img src="images/ProgressBar.png">
+</span>
+
+<h3 id="auto-tags">Auto #tags</h3>
+<p>Users can seamlessly categorize a Task/Event by simply prepending the category name with a &#39;#&#39; in the title. The system automatically assigns the category to the Task/Event and removes the &#39;#&#39; along with the category name from the title. If the category does not yet exist, the program has two options: it can create the new category and assign the Task/Event to it, or alternatively, it can retain the &#39;#text&#39; as part of the title as it is.</p>
+<span class="image main">
+  <img src="images/HashTagParser1.png"/>
+</span>
+<span class="image main">
+  <img src="images/HashTagParser2.png"/>
+</span>
+
+<h3 id="links">Links</h3>
+<p>Our program has the capacity to parse any valid HTTP/HTTPS link included in a description, making it clickable directly from the detailed view of your Event/Task. This feature enhances user experience by providing direct and easy access to relevant online resources.</p>
+<span class="image main">
+  <img src="images/LinkParser.png"/>
+</span>
+
+<h3 id="visual-flourish">Visual Flourish</h3>
+<p>The UI changes, in general, were done by using scene builder, directly editing FXML files, writing some CSS files, and programmatically in Java. We made an attempt to do it all in scene builder, but we were struggling to get a look we like while only relying on this method. We took a little time to learn some CSS so we could make stylesheets for custom buttons. These buttons are highlighted when you hover over them, and change color when clicked on. We also made custom text fields, text areas, dropdown menus, and toolbar, and changed background colors.  The font (Bubblegum Sans) was downloaded from Google Fonts, and we chose it because we wanted our journal to have a fun, colorful, and creative feel.</p>
+<h3 id="splash-screen">Splash Screen</h3>
+<p>Upon every journal opening, users are greeted with a welcoming screen. This feature provides a friendly start to the user&#39;s interaction with the program, setting a positive tone for their journaling experience.</p>
+<span class="image main">
+  <img src="images/Splash.png"/>
+</span>
+
+<h3 id="privacy-lock">Privacy Lock</h3>
+<p>We&#39;ve incorporated security features to safeguard your bullet journal. When creating a journal, users are required to set a password. This password, encrypted using secure hashing algorithms, adds an extra layer of protection to your journal content. Subsequent access to the journal mandates the input of the correct password, ensuring that your notes, tasks, and events remain secure and private.</p>
+<span class="image main">
+  <img src="images/PrivacyLock1.png"/>
+  </span>
+  <span class="image main">
+  <img src="images/PrivacyLock2.png"/>
+</span>
+
+<h3 id="weekly-starters">Weekly Starters</h3>
+<p>Our program offers the flexibility to open a &#39;.bujo&#39; file as a template. Upon doing so, users will be prompted to name the new week, superseding any pre-existing name in the template. While previous Events and Tasks are not transferred, all other preferences such as commitment warnings and categories will be carried forward to the new week. Importantly, this new week is saved as a separate &#39;.bujo&#39; file, ensuring that the original template file remains unaltered. This allows users to reuse templates without the worry of overwriting them.</p>
+<h2 id="solid-principles">SOLID Principles</h2>
+<h3 id="single-responsibility-principle-srp-">Single Responsibility Principle (SRP)</h3>
+<p>The ApplicationController is a good example of the SRP. It handles user interaction logic but leaves the specifics of data persistence to BujoUtils, the specifics of file selection to FileSelector, and so forth. This makes it easier to understand and modify the ApplicationController, since it doesn&#39;t handle unrelated responsibilities.</p>
+<h3 id="open-closed-principle-ocp-">Open-Closed Principle (OCP)</h3>
+<p>This principle is observed in how you&#39;ve implemented the EventHandler&<;ActionEvent> interface in your LoadTemplateHandler class. By implementing this interface, you&#39;ve opened your handler to extension (you can create any number of these for different purposes), but closed it to modification (you won&#39;t have to change the code that triggers the events or the event handling framework itself).</p>
+<h3 id="liskov-substitution-principle-lsp-">Liskov Substitution Principle (LSP)</h3>
+<p>An example can be seen in the usage of the EventHandler&<;ActionEvent> interface in the LoadTemplateHandler class. Any class implementing this interface can be used interchangeably without causing issues or changing the correctness of the program. This ensures that subclasses or implementing classes are substitutable for their base classes or interfaces.</p>
+<h3 id="interface-segregation-principle-isp-">Interface Segregation Principle (ISP)</h3>
+<p>You&#39;re not showing any complex interfaces in your code, but this principle is about making sure that classes don&#39;t have to depend on methods they do not use. For instance, if there were an interface that both LoadTemplateHandler and FileSelector implement, but which includes methods that don&#39;t apply to both classes, it would make sense to split this interface into two smaller, more specific interfaces.</p>
+<h3 id="dependency-inversion-principle-dip-">Dependency Inversion Principle (DIP)</h3>
+<p>The LoadTemplateHandler class provides an example. Its handle() method depends on the ApplicationController through a high-level abstraction, rather than on concrete details. This allows you to change how you implement ApplicationController without needing to modify LoadTemplateHandler. This principle helps to decrease the coupling between classes.</p>
+<h2 id="implementing-future-features">Implementing Future Features</h2>
+<h3 id="menu-bar-and-shortcuts">Menu Bar and Shortcuts</h3>
+<p>We have already implemented a menu bar because we thought it would be a clearer-looking way to design our UI, but we haven&#39;t implemented shortcuts. To do this, we would likely create a create new KeyCodeCombinations in new event handlers, and have a conditional in the handle(Event) method that checks if the inputted event is the right keycode combination. If it is the right Key combination then it delegates to the handle method of the previously built EventHandler&#39;s handle method for the functionality. For example, if you wanted to do ctrl + e to create a new event, the Event handler would delegate to the AddEventHandler&#39;s handle method, which would launch the popup window.</p>
+<p>Another extension of our functionality could come in the form of user-set themes. To do this, all the colors would be set based on an enum that stores hex codes for different element colors. Our application controller would have a field for this enum, and a method that allows the user to change the value of the field. This would allow us to change the color scheme of the entire platform with one function call. Then all you would need to do is to design this menu and implement relevant event handlers.</p>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
